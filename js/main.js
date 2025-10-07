@@ -10,21 +10,20 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("absolute");
   navbar.classList.toggle("top-16");
   navbar.classList.toggle("left-0");
-  navbar.classList.toggle("bg-white");
-  navbar.classList.toggle("text-black");
+  navbar.classList.toggle("bg-black");
   navbar.classList.toggle("w-full");
   navbar.classList.toggle("p-5");
-
 };
 
 // Scroll effect on navbar
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    header.classList.add("bg-white", "shadow-md", "text-black");
+    header.classList.add("bg-white", "shadow-md");
     header.classList.remove("bg-transparent");
     header.querySelectorAll("a").forEach(link => {
-      link.classList.add("text-black");
+      navbar.classList.add("md:text-black");
       link.classList.remove("text-white");
+      
     });
     document.querySelector(".logo i").classList.remove("text-white");
     document.querySelector(".logo i").classList.add("text-red-600");
@@ -33,8 +32,10 @@ window.addEventListener("scroll", () => {
     header.classList.add("bg-transparent");
     header.querySelectorAll("a").forEach(link => {
       link.classList.add("text-white");
-      link.classList.remove("text-black");
+      link.classList.remove("text-white");
     });
     document.querySelector(".logo i").classList.add("text-white");
+      link.classList.remove("text-white");
+
   }
 });
